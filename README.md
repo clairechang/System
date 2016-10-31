@@ -2,5 +2,5 @@
 
 * [Apache httd.conf](apache.md)
 * [Hosts](hosts.md)
-* [Http protocal](http_portocal.md)
+* [Http protocal](http_protocal.md)
 
