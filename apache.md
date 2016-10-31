@@ -28,11 +28,11 @@ Apache的基本設置主要交由httpd.conf來設定管理，要修改Apache的�
 設定如下:
 ```html
 <VirtualHost _default_:80>
-DocumentRoot "C AppServ/www"
+DocumentRoot "C:/AppServ/www"
 ServerName localhost
-/</VirtualHost>
+</VirtualHost>
 
-/<VirtualHost ci.com:80>    
+<VirtualHost ci.com:80>    
 #ServerAdmin webmaster@dummy-host.example.com    
   DocumentRoot "C:/AppServ/www/ci"    
   ServerName ci.com    
@@ -41,7 +41,7 @@ ServerName localhost
 #CustomLog "logs/dummy-host.example.com-access.log" common    
  <Directory "C:/AppServ/www/ci">    
 	Options Indexes FollowSymLinks
-	AllowOverride All
+	AllowOverride All    (打開此列, 網址就不會出現index.php)
 	Require all granted
 	</Directory>
 </VirtualHost>
