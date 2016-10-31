@@ -24,27 +24,28 @@ Apache的基本設置主要交由httpd.conf來設定管理，要修改Apache的�
 |516 |Include conf/extra/httpd-vhosts.conf|用記事本打開此檔編輯|
 
 ###httpd-vhosts.conf
-檔案路徑為AppServ\Apache24\conf\extra 
+檔案路徑為AppServ\Apache24\conf\extra     
 設定如下:
+```html
 <VirtualHost _default_:80>
-DocumentRoot "C:/AppServ/www"
+DocumentRoot "C AppServ/www"
 ServerName localhost
-</VirtualHost>
+/</VirtualHost>
 
-<VirtualHost ci.com:80>    
-ServerAdmin webmaster@dummy-host.example.com
- DocumentRoot "C:/AppServ/www/ci"
- ServerName ci.com
-ServerAlias www.dummy-host.example.com
-ErrorLog "logs/dummy-host.example.com-error.log"
-CustomLog "logs/dummy-host.example.com-access.log" common
- <Directory "C:/AppServ/www/ci">    
+/<VirtualHost ci.com:80>    
+#ServerAdmin webmaster@dummy-host.example.com    
+  DocumentRoot "C:/AppServ/www/ci"    
+  ServerName ci.com    
+#ServerAlias www.dummy-host.example.com    
+#ErrorLog "logs/dummy-host.example.com-error.log"    
+#CustomLog "logs/dummy-host.example.com-access.log" common    
+ <Directory "C:/AppServ/www/ci">    
 	Options Indexes FollowSymLinks
 	AllowOverride All
 	Require all granted
 	</Directory>
 </VirtualHost>
-
+```
 ---
 >參考網址:
 - httpd.conf主要設定 <http://www.twisu.com.tw/5/linset/www1.htm>
