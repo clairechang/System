@@ -19,7 +19,7 @@ Apache的基本設置主要交由httpd.conf來設定管理，要修改Apache的�
 |276 | Options Indexes FollowSymLinks | 讓你的Link能連接到其他目錄。 |
 |277 | Options None |？  |
 |284 | AllowOverride All | Rewrite網址 |
-|297 | irectoryIndex index.html index.htm index.php   | 這裡設定預設主頁的名稱，會自動找到此檔案 |
+|297 | DirectoryIndex index.html index.htm index.php   | 這裡設定預設主頁的名稱，會自動找到此檔案 |
 |515 |Virtual hosts |虛擬主機|
 |516 |Include conf/extra/httpd-vhosts.conf|用記事本打開此檔編輯|
 
@@ -41,7 +41,7 @@ ServerName localhost
 #CustomLog "logs/dummy-host.example.com-access.log" common    
  <Directory "C:/AppServ/www/ci">    
 	Options Indexes FollowSymLinks
-	AllowOverride All    (打開此列, 網址就不會出現index.php)
+	AllowOverride All    
 	Require all granted
 	</Directory>
 </VirtualHost>
