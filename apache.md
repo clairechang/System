@@ -6,7 +6,7 @@ Apache的基本設置主要交由httpd.conf來設定管理，要修改Apache的�
 2.  'Main' server configurationphpma.com (定義主要或者預設服務參數的指令，也為所有虛擬主機提供預設的設定參數)
 3.  Virtual Hosts (虛擬主機的設定參數)
 
-####httpd.conf
+###httpd.conf
 檔案路徑為AppServ\Apache24\conf (使用記事本開啟)
 
 |Line|指令|說明|
@@ -23,7 +23,7 @@ Apache的基本設置主要交由httpd.conf來設定管理，要修改Apache的�
 |515 |Virtual hosts |虛擬主機|
 |516 |Include conf/extra/httpd-vhosts.conf|用記事本打開此檔編輯|
 
-####httpd-vhosts.conf
+###httpd-vhosts.conf
 檔案路徑為AppServ\Apache24\conf\extra 
 設定如下:
 <VirtualHost _default_:80>
@@ -31,17 +31,17 @@ DocumentRoot "C:/AppServ/www"
 ServerName localhost
 </VirtualHost>
 
-<VirtualHost ci.com:80>
-#    ServerAdmin webmaster@dummy-host.example.com
-	 DocumentRoot "C:/AppServ/www/ci"
-	 ServerName ci.com
-#    ServerAlias www.dummy-host.example.com
-#    ErrorLog "logs/dummy-host.example.com-error.log"
-#    CustomLog "logs/dummy-host.example.com-access.log" common
-	<Directory "C:/AppServ/www/ci">
-		Options Indexes FollowSymLinks
-		AllowOverride All
-		Require all granted
+<VirtualHost ci.com:80>    
+ServerAdmin webmaster@dummy-host.example.com
+ DocumentRoot "C:/AppServ/www/ci"
+ ServerName ci.com
+ServerAlias www.dummy-host.example.com
+ErrorLog "logs/dummy-host.example.com-error.log"
+CustomLog "logs/dummy-host.example.com-access.log" common
+ <Directory "C:/AppServ/www/ci">    
+	Options Indexes FollowSymLinks
+	AllowOverride All
+	Require all granted
 	</Directory>
 </VirtualHost>
 
